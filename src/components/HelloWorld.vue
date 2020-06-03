@@ -18,9 +18,13 @@
             <md-button
               href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
               class="md-success md-lg"
-              target="_blank"
-              ><i class="fas fa-play"></i> Watch video</md-button
-            >
+              target="_blank">
+              <i class="fas fa-play"></i> Watch video</md-button>
+
+              <md-button
+              class="md-success md-lg"
+              target="_blank">
+              <i class="fas fa-play"></i><router-link to="/Products">Explore Products</router-link></md-button>
           </div>
         </div>
       </div>
@@ -47,13 +51,11 @@
               <div class="md-layout-item md-medium-size-33 md-small-size-100">
                 <div class="info">
                   <div class="icon icon-info">
-                    <md-icon>chat</md-icon>
+                    <md-icon>bolt</md-icon>
                   </div>
-                  <h4 class="info-title">Free Chat</h4>
+                  <h4 class="info-title">Fastest Delivery</h4>
                   <p>
-                    Divide details about your product or agency work into parts.
-                    Write a few lines about each one. A paragraph describing a
-                    feature will be enough.
+                    Accounts that you buy will be delivered as soon as possible.
                   </p>
                 </div>
               </div>
@@ -62,24 +64,20 @@
                   <div class="icon icon-success">
                     <md-icon>verified_user</md-icon>
                   </div>
-                  <h4 class="info-title">Verified Users</h4>
+                  <h4 class="info-title">Totally Secure</h4>
                   <p>
-                    Divide details about your product or agency work into parts.
-                    Write a few lines about each one. A paragraph describing a
-                    feature will be enough.
+                  All payment methods and technologies consider the data security
                   </p>
                 </div>
               </div>
               <div class="md-layout-item md-medium-size-33 md-small-size-100">
                 <div class="info">
                   <div class="icon icon-danger">
-                    <md-icon>fingerprint</md-icon>
+                    <md-icon>favorite</md-icon>
                   </div>
-                  <h4 class="info-title">Fingerprint</h4>
+                  <h4 class="info-title">Customer Happiness</h4>
                   <p>
-                    Divide details about your product or agency work into parts.
-                    Write a few lines about each one. A paragraph describing a
-                    feature will be enough.
+                   We are always here to help you after or before your purchase.
                   </p>
                 </div>
               </div>
@@ -242,10 +240,7 @@
             <div class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto">
               <h2 class="text-center title">Work with us</h2>
               <h4 class="text-center description">
-                Divide details about your product or agency work into parts.
-                Write a few lines about each one and contact us about any
-                further collaboration. We will responde get back to you in a
-                couple of hours.
+                We always care gamers who believe in games and their fascinating world. GamerMarkt is nothing without gamers that's why we'll always be aware what a gamer needs.
               </h4>
               <form class="contact-form">
                 <div class="md-layout">
@@ -287,7 +282,7 @@ export default {
   props: {
     header: {
       type: String,
-      default: require("@/assets/img/bg7.jpg")
+      default: require("@/assets/img/home.jpg")
     },
     teamImg1: {
       type: String,

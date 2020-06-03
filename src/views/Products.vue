@@ -1,6 +1,7 @@
 <template>
 
 <div class="row">
+  <h1>Exclusive Products</h1>
   <div class="col-md-6" v-for="(obj,key) in products" :key="key">
     <div class="card">
       <img :src='obj.img' alt="Denim Jeans" style="width:40%" >
