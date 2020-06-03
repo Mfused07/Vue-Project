@@ -9,11 +9,6 @@
         <ul>
           <li>
             <a href="">
-              Mfused
-            </a>
-          </li>
-          <li>
-            <a href="">
               About Us
             </a>
           </li>
@@ -31,7 +26,7 @@
       </nav>
       <div class="copyright">
         &copy; {{ year }}, made with <md-icon>favorite</md-icon> by
-        <a href="" target="_blank">Mfused</a>
+        <a href="" target="_blank">Mfused Army</a>
         for a better web.
       </div>
     </div>
@@ -41,13 +36,13 @@
 export default {
   props: {
     backgroundColor: String,
-    type: String
+    type: String,
   },
   data() {
     return {
-      year: new Date().getFullYear()
+      year: new Date().getFullYear(),
     };
-  }
+  },
 };
 </script>
 <style></style>

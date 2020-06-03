@@ -1,6 +1,4 @@
 <template>
-
-
   <md-toolbar
     id="toolbar"
     md-elevation="0"
@@ -10,7 +8,9 @@
   >
     <div class="md-toolbar-row md-collapse-lateral">
       <div class="md-toolbar-section-start">
-        <h3 class="md-title">Shop Now</h3>
+        <!-- <h3 class="md-title">Shop Now</h3> -->
+        <!-- <i class="fas fa-play"></i> -->
+        <router-link to="/Products">Shop Now</router-link>
       </div>
       <div class="md-toolbar-section-end">
         <md-button
@@ -22,7 +22,6 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </md-button>
-
         <div class="md-collapse">
           <div class="md-collapse-wrapper">
             <mobile-menu nav-mobile-section-start="false">
@@ -37,11 +36,7 @@
                 </a>
               </li>
 
-              <md-list-item
-                href="/Home"
-                target="_blank"
-                v-if="showDownload"
-              >
+              <md-list-item href="/Home" target="_blank" v-if="showDownload">
                 <i class="material-icons">home</i>
                 <p><router-link to="/">Home</router-link></p>
               </md-list-item>
@@ -51,44 +46,64 @@
                 @click="scrollToElement()"
                 v-if="showDownload"
               >
-              
                 <i class="material-icons">shop</i>
                 <p><router-link to="/Products">Products</router-link></p>
               </md-list-item>
-              
 
-              
-
-              <md-list-item
-                href="https://twitter.com"
-                target="_blank"
-              >
+              <li href="javascript:void(0)" class="md-list-item">
+                <a
+                  mdripple="true"
+                  href="javascript:void(0)"
+                  class="md-list-item-link md-list-item-container md-button-clean"
+                >
+                  <div class="md-list-item-content md-ripple">
+                    <md-icon>favorite</md-icon>
+                    <p>Whishlist</p>
+                  </div></a
+                >
+              </li>
+              <md-list-item href="https://twitter.com" target="_blank">
                 <i class="fab fa-twitter"></i>
                 <p class="hidden-lg">Twitter</p>
                 <md-tooltip md-direction="bottom"
                   >Follow us on Twitter</md-tooltip
                 >
               </md-list-item>
-              <md-list-item
-                href="https://www.facebook.com"
-                target="_blank"
-              >
+              <md-list-item href="https://www.facebook.com" target="_blank">
                 <i class="fab fa-facebook-square"></i>
                 <p class="hidden-lg">Facebook</p>
                 <md-tooltip md-direction="bottom"
                   >Like us on Facebook</md-tooltip
                 >
               </md-list-item>
-              <md-list-item
-                href="https://www.instagram.com"
-                target="_blank"
-              >
+              <md-list-item href="https://www.instagram.com" target="_blank">
                 <i class="fab fa-instagram"></i>
                 <p class="hidden-lg">Instagram</p>
                 <md-tooltip md-direction="bottom"
                   >Follow us on Instagram</md-tooltip
                 >
               </md-list-item>
+
+              <div class="md-collapse">
+                <div class="md-autocomplete">
+                  <div
+                    class="md-field md-autocomplete search has-white md-theme-default md-clearable"
+                  >
+                    <div class="md-menu">
+                      <input
+                        type="text"
+                        id="md-input-0tfqhvnwa"
+                        class="md-input"
+                        placeholder="Search"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <md-icon>search</md-icon>
+              <md-button class="md-dense md-raised md-primary"
+                >Submit</md-button
+              >
             </md-list>
           </div>
         </div>
@@ -96,6 +111,12 @@
     </div>
   </md-toolbar>
 </template>
+
+<style lang="scss" scoped>
+small {
+  display: block;
+}
+</style>
 
 <script>
 let resizeTimeout;
@@ -113,6 +134,7 @@ function resizeThrottler(actualResizeHandler) {
 
 // import MobileMenu from "@/layout/MobileMenu";
 export default {
+  name: "RegularButtons",
   components: {
     // MobileMenu
   },
@@ -128,26 +150,26 @@ export default {
           "danger",
           "success",
           "warning",
-          "info"
+          "info",
         ].includes(value);
-      }
+      },
     },
     colorOnScroll: {
       type: Number,
-      default: 0
-    }
+      default: 0,
+    },
   },
   data() {
     return {
       extraNavClasses: "",
-      toggledClass: false
+      toggledClass: false,
     };
   },
   computed: {
     showDownload() {
       const excludedRoutes = ["login", "landing", "profile"];
-      return excludedRoutes.every(r => r !== this.$route.name);
-    }
+      return excludedRoutes.every((r) => r !== this.$route.name);
+    },
   },
   methods: {
     bodyClick() {
@@ -193,13 +215,13 @@ export default {
       if (element_id) {
         element_id.scrollIntoView({ block: "end", behavior: "smooth" });
       }
-    }
+    },
   },
   mounted() {
     document.addEventListener("scroll", this.scrollListener);
   },
   beforeDestroy() {
     document.removeEventListener("scroll", this.scrollListener);
-  }
+  },
 };
 </script>

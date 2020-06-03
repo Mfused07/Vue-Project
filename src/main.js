@@ -10,20 +10,20 @@ Vue.config.productionTip = false
 Vue.use(VueMaterial);
 
 const NavbarStore = {
-  showNavbar: false
+    showNavbar: false
 };
 
 Vue.mixin({
-  data() {
-    return {
-      NavbarStore
-    };
-  }
+    data() {
+        return {
+            NavbarStore
+        };
+    }
 });
 
 
 new Vue({
-  router,
-  store,
-  render: h => h(App)
+    router,
+    store,
+    render: h => h(App)
 }).$mount('#app')

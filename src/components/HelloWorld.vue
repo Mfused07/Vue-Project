@@ -8,23 +8,29 @@
           >
             <h1 class="title">Your Story Starts With Us.</h1>
             <h4>
-              Every landing page needs a small description after the big bold
-              title, that's why we added this text here. Add here all the
-              information that can make you or your product create the first
-              impression.
+              Not every ecommerce product is a physical one, yet it still takes
+              the same wordsmith finesse to sell a service. We ensure all the
+              products to bw good and well organised. As youth and huge
+              engagement in our products so we make it more stylish and
+              shining.That helps us to focus on our focal points.
             </h4>
             <br />
-            
+            <!-- 
             <md-button
               href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
               class="md-success md-lg"
-              target="_blank">
-              <i class="fas fa-play"></i> Watch video</md-button>
+              target="_blank"
+            >
+              <i class="fas fa-play"></i> Watch video</md-button
+            > -->
 
-              <md-button
-              class="md-success md-lg"
-              target="_blank">
-              <i class="fas fa-play"></i><router-link to="/Products">Explore Products</router-link></md-button>
+            <md-button class="md-success md-lg" target="_blank">
+              <!-- <i class="fas fa-play"></i
+              > -->
+              <router-link to="/Products"
+                >Explore Products</router-link
+              ></md-button
+            >
           </div>
         </div>
       </div>
@@ -38,11 +44,9 @@
             >
               <h2 class="title text-center">Let's talk product</h2>
               <h5 class="description">
-                This is the paragraph where you can write more details about
-                your product. Keep you user engaged by providing meaningful
-                information. Remember that by this time, the user is curious,
-                otherwise he wouldn't scroll to get here. Add a button if you
-                want the user to see more.
+                All we need is your happiness. So, we come up with amazing
+                products that you like alot, shop and explore our new products
+                easily and fast, your happiness is our very first priority .
               </h5>
             </div>
           </div>
@@ -66,7 +70,8 @@
                   </div>
                   <h4 class="info-title">Totally Secure</h4>
                   <p>
-                  All payment methods and technologies consider the data security
+                    All payment methods and technologies consider the data
+                    security
                   </p>
                 </div>
               </div>
@@ -77,7 +82,8 @@
                   </div>
                   <h4 class="info-title">Customer Happiness</h4>
                   <p>
-                   We are always here to help you after or before your purchase.
+                    We are always here to help you after or before your
+                    purchase.
                   </p>
                 </div>
               </div>
@@ -101,17 +107,17 @@
                       />
                     </div>
                     <h4 class="card-title">
-                      Gigi Hadid
+                      Saad Malik
                       <br />
-                      <small class="card-description text-muted">Model</small>
+                      <small class="card-description text-muted"
+                        >Web Designer</small
+                      >
                     </h4>
 
                     <md-card-content>
                       <p class="card-description">
-                        You can write here details about one of your team
-                        members. You can give more details about what they do.
-                        Feel free to add some <a href="#">links</a> for people
-                        to be able to follow them outside the site.
+                        He is Student of Computer Science, studying in Fast
+                        Nuces Peshawar.
                       </p>
                     </md-card-content>
 
@@ -149,19 +155,17 @@
                       />
                     </div>
                     <h4 class="card-title">
-                      Carla Hortensia
+                      Mubshir Yasin
                       <br />
                       <small class="card-description text-muted"
-                        >Designer</small
+                        >VUE Designer</small
                       >
                     </h4>
 
                     <md-card-content>
                       <p class="card-description">
-                        You can write here details about one of your team
-                        members. You can give more details about what they do.
-                        Feel free to add some <a href="#">links</a> for people
-                        to be able to follow them outside the site.
+                        He is Student of Computer Science, studying in Fast
+                        Nuces Peshawar.
                       </p>
                     </md-card-content>
 
@@ -193,17 +197,17 @@
                       />
                     </div>
                     <h4 class="card-title">
-                      Kendall Jenner
+                      Ali Ghulam
                       <br />
-                      <small class="card-description text-muted">Model</small>
+                      <small class="card-description text-muted"
+                        >Designer</small
+                      >
                     </h4>
 
                     <md-card-content>
                       <p class="card-description">
-                        You can write here details about one of your team
-                        members. You can give more details about what they do.
-                        Feel free to add some <a href="#">links</a> for people
-                        to be able to follow them outside the site.
+                        He is Student of Computer Science, studying in Fast
+                        Nuces Peshawar.
                       </p>
                     </md-card-content>
 
@@ -240,7 +244,9 @@
             <div class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto">
               <h2 class="text-center title">Work with us</h2>
               <h4 class="text-center description">
-                We always care gamers who believe in games and their fascinating world. GamerMarkt is nothing without gamers that's why we'll always be aware what a gamer needs.
+                We always care gamers who believe in games and their fascinating
+                world. GamerMarkt is nothing without gamers that's why we'll
+                always be aware what a gamer needs.
               </h4>
               <form class="contact-form">
                 <div class="md-layout">
@@ -277,47 +283,43 @@
 
 <script>
 export default {
-
-    bodyClass: "landing-page",
+  bodyClass: "landing-page",
   props: {
     header: {
       type: String,
-      default: require("@/assets/img/home.jpg")
+      default: require("@/assets/img/home.jpg"),
     },
     teamImg1: {
       type: String,
-      default: require("@/assets/img/faces/avatar.jpg")
+      default: require("@/assets/img/faces/avatar.jpg"),
     },
     teamImg2: {
       type: String,
-      default: require("@/assets/img/faces/christian.jpg")
+      default: require("@/assets/img/faces/christian.jpg"),
     },
     teamImg3: {
       type: String,
-      default: require("@/assets/img/faces/kendall.jpg")
-    }
+      default: require("@/assets/img/faces/kendall.jpg"),
+    },
   },
   data() {
     return {
       name: null,
       email: null,
-      message: null
+      message: null,
     };
   },
   computed: {
     headerStyle() {
       return {
-        backgroundImage: `url(${this.header})`
+        backgroundImage: `url(${this.header})`,
       };
-    }
-  }
-
-}
+    },
+  },
+};
 </script>
 
-
 <style scoped lang="scss">
-
 .md-card-actions.text-center {
   display: flex;
   justify-content: center !important;
@@ -329,5 +331,4 @@ export default {
 .md-has-textarea + .md-layout {
   margin-top: 15px;
 }
-
 </style>
