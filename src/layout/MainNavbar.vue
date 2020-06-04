@@ -7,6 +7,10 @@
     :color-on-scroll="colorOnScroll"
   >
     <div class="md-toolbar-row md-collapse-lateral">
+        
+
+
+
       <div class="md-toolbar-section-start">
         <!-- <h3 class="md-title">Shop Now</h3> -->
         <!-- <i class="fas fa-play"></i> -->
@@ -47,7 +51,7 @@
                 v-if="showDownload"
               >
                 <i class="material-icons">shop</i>
-                <p><router-link to="/Products">Products</router-link></p>
+                <p><router-link to="/ProductView">Products</router-link></p>
               </md-list-item>
 
               <li href="javascript:void(0)" class="md-list-item">
@@ -102,13 +106,19 @@
               </div>
               <md-icon>search</md-icon>
               <md-button class="md-dense md-raised md-primary"
-                >Submit</md-button
+                >Search</md-button
               >
             </md-list>
           </div>
+         
         </div>
+        
       </div>
+      
     </div>
+    <router-link to="/Login">
+    <md-button class="md-primary md-round md-sm"><md-icon >login</md-icon>login</md-button>
+    </router-link>
   </md-toolbar>
 </template>
 

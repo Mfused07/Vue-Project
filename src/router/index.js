@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import MainNavbar from '@/layout/MainNavbar'
 import Home from '@/views/Home'
 import Login from '@/views/Login'
-import Products from '@/views/Products'
+import ProductView from '@/ProductView'
 import MainFooter from "@/layout/MainFooter.vue";
 
 Vue.use(VueRouter)
@@ -29,9 +29,9 @@ Vue.use(VueRouter)
   },
 
   {
-    path: '/Products',
-    name:'Products',
-    components: { default: Products, header: MainNavbar, footer: MainFooter }
+    path: '/ProductView',
+    name:'ProductView',
+    components: { default: ProductView, header: MainNavbar, footer: MainFooter }
   },
   
   {

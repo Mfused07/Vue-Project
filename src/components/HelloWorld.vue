@@ -15,22 +15,22 @@
               shining.That helps us to focus on our focal points.
             </h4>
             <br />
-            <!-- 
+            
             <md-button
-              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              href="https://www.youtube.com/"
               class="md-success md-lg"
               target="_blank"
             >
               <i class="fas fa-play"></i> Watch video</md-button
-            > -->
-
+            >
+            <router-link to="/ProductView"
+                >
             <md-button class="md-success md-lg" target="_blank">
               <!-- <i class="fas fa-play"></i
               > -->
-              <router-link to="/Products"
-                >Explore Products</router-link
-              ></md-button
-            >
+              Explore Products</md-button>
+            </router-link>
+
           </div>
         </div>
       </div>
@@ -291,15 +291,15 @@ export default {
     },
     teamImg1: {
       type: String,
-      default: require("@/assets/img/faces/avatar.jpg"),
+      default: require("@/assets/img/faces/saadCeo.jpg"),
     },
     teamImg2: {
       type: String,
-      default: require("@/assets/img/faces/christian.jpg"),
+      default: require("@/assets/img/faces/mfused.jpg"),
     },
     teamImg3: {
       type: String,
-      default: require("@/assets/img/faces/kendall.jpg"),
+      default: require("@/assets/img/faces/muftwala.jpg"),
     },
   },
   data() {

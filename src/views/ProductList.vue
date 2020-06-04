@@ -31,6 +31,13 @@
     // source for image fix :https://github.com/caiobiodere/cordova-template-framework7-vue-webpack/issues/7 
      export default {
 
+       props: {
+    header: {
+      type: String,
+      default: require("~@/assets/img/home.jpg"),
+    }
+       },
+
      data() {
      return {
      products : [
