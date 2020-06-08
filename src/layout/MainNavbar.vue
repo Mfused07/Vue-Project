@@ -12,9 +12,13 @@
 
 
       <div class="md-toolbar-section-start">
-        <!-- <h3 class="md-title">Shop Now</h3> -->
-        <!-- <i class="fas fa-play"></i> -->
-        <router-link to="/Products">Shop Now</router-link>
+      
+       <h3 class="md-title">SteamCart</h3>
+        <router-link to="/">
+       <i class="fas fa-play"></i>
+        
+        
+        </router-link>
       </div>
       <div class="md-toolbar-section-end">
         <md-button
@@ -40,7 +44,7 @@
                 </a>
               </li>
 
-              <md-list-item href="/Home" target="_blank" v-if="showDownload">
+              <md-list-item href="/" target="_blank" v-if="showDownload">
                 <i class="material-icons">home</i>
                 <p><router-link to="/">Home</router-link></p>
               </md-list-item>
@@ -110,15 +114,24 @@
               >
             </md-list>
           </div>
-         
+
+          <router-link to="/Login">
+          <md-button class="md-primary md-round md-sm" id="login-btn"><md-icon >login</md-icon>login</md-button>
+          </router-link>
+
+          <router-link to="/SignUp">
+          <md-button class="md-primary md-round md-sm" id="signup-btn"><md-icon >note</md-icon>Signup</md-button>
+          </router-link>
+          
         </div>
         
       </div>
       
+      
     </div>
-    <router-link to="/Login">
-    <md-button class="md-primary md-round md-sm"><md-icon >login</md-icon>login</md-button>
-    </router-link>
+    
+
+
   </md-toolbar>
 </template>
 
@@ -126,6 +139,18 @@
 small {
   display: block;
 }
+
+#login-btn{
+  margin-left: 10%;
+  padding-bottom: 5%;
+}
+
+#signup-btn{
+  margin-left:20%;
+  padding-top:4% ;
+}
+
+
 </style>
 
 <script>

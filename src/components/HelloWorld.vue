@@ -8,11 +8,7 @@
           >
             <h1 class="title">Your Story Starts With Us.</h1>
             <h4>
-              Not every ecommerce product is a physical one, yet it still takes
-              the same wordsmith finesse to sell a service. We ensure all the
-              products to bw good and well organised. As youth and huge
-              engagement in our products so we make it more stylish and
-              shining.That helps us to focus on our focal points.
+              Buy gift cards, game cards, google cards, itunes cards, psn cards, steam cards and pc game cd keys from steam store. Fast SMS delivery within 15-60 minutes.
             </h4>
             <br />
             
@@ -186,6 +182,50 @@
                   </md-card>
                 </div>
               </div>
+
+              <div class="md-layout-item md-medium-size-33 md-small-size-100">
+                <div class="team-player">
+                  <md-card class="md-card-plain">
+                    <div class="md-layout-item md-size-50 mx-auto">
+                      <img
+                        :src="teamImg4"
+                        alt="Thumbnail Image"
+                        class="img-raised rounded-circle img-fluid"
+                      />
+                    </div>
+                    <h4 class="card-title">
+                      Huzaifa Afridi
+                      <br />
+                      <small class="card-description text-muted"
+                        >Backend Developer</small
+                      >
+                    </h4>
+
+                    <md-card-content>
+                      <p class="card-description">
+                        He is Student of Computer Science, studying in Fast
+                        Nuces Peshawar.
+                      </p>
+                    </md-card-content>
+
+                    <md-card-actions class="text-center">
+                      <md-button
+                        href="javascript:void(0)"
+                        class="md-just-icon md-simple"
+                      >
+                        <i class="fab fa-twitter"></i>
+                      </md-button>
+                      <md-button
+                        href="javascript:void(0)"
+                        class="md-just-icon md-simple"
+                      >
+                        <i class="fab fa-linkedin"></i>
+                      </md-button>
+                    </md-card-actions>
+                  </md-card>
+                </div>
+              </div>
+
               <div class="md-layout-item md-medium-size-33 md-small-size-100">
                 <div class="team-player">
                   <md-card class="md-card-plain">
@@ -300,6 +340,10 @@ export default {
     teamImg3: {
       type: String,
       default: require("@/assets/img/faces/muftwala.jpg"),
+    },
+    teamImg4: {
+      type: String,
+      default: require("@/assets/img/faces/huzaifa.jpg"),
     },
   },
   data() {

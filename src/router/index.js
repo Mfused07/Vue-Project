@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import MainNavbar from '@/layout/MainNavbar'
 import Home from '@/views/Home'
+import SignUp from '@/views/SignUp'
 import Login from '@/views/Login'
 import ProductView from '@/ProductView'
 import MainFooter from "@/layout/MainFooter.vue";
@@ -42,6 +43,17 @@ Vue.use(VueRouter)
     props: {
       header: { colorOnScroll: 400 }
     }
+    },
+  
+
+    {
+      path: "/SignUp",
+      name: "SignUp",
+      // component: () => import(/* webpackChunkName: "about" */ '../views/SignUp.vue'),
+      components: { default: SignUp, header: MainNavbar, footer: MainFooter },
+      props: {
+        header: { colorOnScroll: 400 }
+      }
   },
 
 

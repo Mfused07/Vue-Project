@@ -6,8 +6,8 @@
           <div
             class="md-layout-item md-size-33 md-small-size-66 md-xsmall-size-100 md-medium-size-40 mx-auto"
           >
-            <login-card header-color="green">
-              <h4 slot="title" class="card-title">Login</h4>
+            <SignUp-card header-color="green">
+              <h4 slot="title" class="card-title">SignUp</h4>
               <md-button
                 slot="buttons"
                 href="javascript:void(0)"
@@ -33,6 +33,11 @@
               </md-button>
               <p slot="description" class="description">Or Be Classical</p>
               <md-field class="md-form-group" slot="inputs">
+                <md-icon>face</md-icon>
+                <label>Full Name...</label>
+                <md-input v-model="firstname"></md-input>
+              </md-field>
+              <md-field class="md-form-group" slot="inputs">
                 <md-icon>email</md-icon>
                 <label>Email...</label>
                 <md-input v-model="email" type="email"></md-input>
@@ -43,9 +48,9 @@
                 <md-input v-model="password"></md-input>
               </md-field>
               <md-button slot="footer" class="md-simple md-success md-lg">
-                Get Started
+                Register
               </md-button>
-            </login-card>
+            </SignUp-card>
           </div>
         </div>
       </div>
@@ -54,13 +59,13 @@
 </template>
 
 <script>
-import { LoginCard } from '../components/cards/LoginCard';
+import { SignUpCard } from '../components/cards/SignUpCard';
 export default {
 
 components: {
-  LoginCard
+  SignUpCard
 },
-  bodyClass: "login-page",
+  bodyClass: "signup-page",
 
   data() {
 
@@ -77,7 +82,7 @@ components: {
 
     header: {
       type: String,
-      default: require("@/assets/img/login.jpg")
+      default: require("@/assets/img/signup.jpg")
     }
 
 
